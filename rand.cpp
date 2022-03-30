@@ -41,6 +41,7 @@ int main(int argc, char* argv[]){
         getline(std::cin, line);
         lines.push_back(line);
     }
+    lines.pop_back(); // last empty line
     std::random_shuffle(lines.begin(), lines.end());
     if(!reverseFlag){
         int end = min(n, int(lines.size()));

@@ -29,7 +29,7 @@ int main(int argc, char* argv[]){
             i += 1;
         }
         if(sArg == "--d" || sArg == "-d"){
-            spliter = std::stoi(string(argv[i+1]));
+            spliter = string(argv[i+1]);
             i += 1;
         }
         i += 1;
