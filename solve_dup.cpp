@@ -20,7 +20,7 @@ std::vector<std::string> split(std::string const &input) {
 }
 int main(int argc, char* argv[]){
     string sArg;
-    int i = 0, n = 5;
+    int i = 1, n = 5;
     string spliter = "#";
     while(i < argc){
         sArg = string(argv[i]);
@@ -34,6 +34,7 @@ int main(int argc, char* argv[]){
         }
         else{
             cout << "Unknown Arg: " << sArg << endl;
+            return -1;
         }
         i += 1;
     }
