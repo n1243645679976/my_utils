@@ -13,7 +13,7 @@ using std::min;
 int main(int argc, char* argv[]){
     string sArg;
     // initial
-    int i = 0, n = 1;
+    int i = 1, n = 1;
     bool reverseFlag = false;
     srand(time(NULL));
 
@@ -25,12 +25,16 @@ int main(int argc, char* argv[]){
             i += 1;
             srand(seed);
         }
-        if(sArg == "--n" || sArg == "-n"){
+        else if(sArg == "--n" || sArg == "-n"){
             n = std::stoi(string(argv[i+1]));
             i += 1;
         }
-        if(sArg == "-r" || sArg == "--r" || sArg == "--reverse" || sArg == "-reverse"){
+        else if(sArg == "-r" || sArg == "--r" || sArg == "--reverse" || sArg == "-reverse"){
             reverseFlag = true;
+        }
+        else{
+            cout << "unkown arg " << sArg << endl;
+            return -1;
         }
         i += 1;
     }

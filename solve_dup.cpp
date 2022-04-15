@@ -28,9 +28,12 @@ int main(int argc, char* argv[]){
             n = std::stoi(string(argv[i+1]));
             i += 1;
         }
-        if(sArg == "--d" || sArg == "-d"){
+        else if(sArg == "--d" || sArg == "-d"){
             spliter = string(argv[i+1]);
             i += 1;
+        }
+        else{
+            cout << "Unknown Arg: " << sArg << endl;
         }
         i += 1;
     }
