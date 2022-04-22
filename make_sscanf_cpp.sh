@@ -30,7 +30,6 @@ echo ");
 int main(int argc, char** argv){
     string pattern = string(argv[1]);
     string target = string(argv[2]);
-    cout<<pattern<<endl<<target<<endl;
     vector<char*> output;
     output = ssscanf(argv[2], argv[1]);
     int last_chars = 0;

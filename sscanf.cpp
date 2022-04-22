@@ -20,7 +20,6 @@ sscanf(target, pattern, ans[0], ans[1], ans[2], ans[3], ans[4], ans[5], ans[6], 
 int main(int argc, char** argv){
     string pattern = string(argv[1]);
     string target = string(argv[2]);
-    cout<<pattern<<endl<<target<<endl;
     vector<char*> output;
     output = ssscanf(argv[2], argv[1]);
     int last_chars = 0;
