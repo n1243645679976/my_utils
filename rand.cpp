@@ -41,11 +41,11 @@ int main(int argc, char* argv[]){
 
     string line;
     std::vector<string> lines;
-    while(cin){
-        getline(std::cin, line);
+    while(getline(std::cin, line)){
+//        getline(std::cin, line);
         lines.push_back(line);
     }
-    lines.pop_back(); // last empty line
+//    lines.pop_back(); // last empty line
     std::random_shuffle(lines.begin(), lines.end());
     if(!reverseFlag){
         int end = min(n, int(lines.size()));
