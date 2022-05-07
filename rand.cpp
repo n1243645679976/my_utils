@@ -14,7 +14,7 @@ int main(int argc, char* argv[]){
     string sArg;
     // initial
     int i = 1, n = 1;
-    bool reverseFlag = false;
+    bool reverseFlag = false, sortFlag = false;
     srand(time(NULL));
 
     // parse Arguments
@@ -31,6 +31,9 @@ int main(int argc, char* argv[]){
         }
         else if(sArg == "-r" || sArg == "--r" || sArg == "--reverse" || sArg == "-reverse"){
             reverseFlag = true;
+        }
+        else if(sArg == "--sort" || sArg == "--sorted" || sArg == "-S"){
+            sortFlag = true;
         }
         else{
             cout << "unkown arg " << sArg << endl;
@@ -49,12 +52,14 @@ int main(int argc, char* argv[]){
     std::random_shuffle(lines.begin(), lines.end());
     if(!reverseFlag){
         int end = min(n, int(lines.size()));
+        if(sortFlag) sort(lines.begin(), lines.begin()+end);
         for(int i=0;i<end;++i){
             cout<<lines[i]<<endl;
         }
     }
     else{
         int start = min(n, int(lines.size())), ll = lines.size();
+        if(sortFlag) sort(lines.begin()+n, lines.end());
         for(int i=n;i<ll;++i){
             cout<<lines[i]<<endl;
         }
